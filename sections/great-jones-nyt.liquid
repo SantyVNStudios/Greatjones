@@ -2,6 +2,12 @@
 <link rel="stylesheet" href="{{ 'component-slider.css' | asset_url }}" media="print" onload="this.media='all'">
 <noscript>{{ 'component-slider.css' | asset_url | stylesheet_tag }}</noscript>
 
+{% style %}
+    .title__nyt h2{
+      color: {{ section.settings.ny_color }};
+    }
+{% endstyle %}
+
 <div class="multicolumn background_nyt background-{{ section.settings.background_style }}{% if section.settings.title == blank %} no-heading{% endif %}">
   <div class="page-width">
     <div class="title__nyt title-wrapper-with-link title-wrapper--self-padded-mobile{% if section.settings.title == blank %} title-wrapper-with-link--no-heading{% endif %}">
@@ -101,6 +107,11 @@
       "id": "title",
       "default": "Multicolumn",
       "label": "t:sections.multicolumn.settings.title.label"
+    },
+    {
+      "type": "color",
+      "id": "ny_color",
+      "label": "Title Colors"
     },
     {
       "type": "select",

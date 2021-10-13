@@ -559,7 +559,6 @@
     margin: 0 !important;
 }
 .title__nyt h2 {
-    color: var(--color-base-text)!important;
     margin-top: 56px !important;
     margin-bottom: 107px !important;
     font-size: 24px !important;
