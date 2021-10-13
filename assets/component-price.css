@@ -23,9 +23,9 @@
   flex-direction: column;
 }
 
-.price dd {
+/* .price dd {
   margin: 0 1rem 0 0;
-}
+} */
 
 .price .price__last:last-of-type {
   margin: 0;

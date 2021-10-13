@@ -1,0 +1,86 @@
+<div class="background__reviews">
+    
+    <div class="reviews__title">
+        <h1>{{ section.settings.reviews_title }}</h1>
+    </div>
+
+    <div class="reviews__subtitle">
+        <div class="reviews__subtitle-content" style="display: flex; align-items: center;">
+            <span class="spr-starratings spr-review-header-starratings stars-products" aria-label="{{ product_card_product.metafields.reviews.rating.value }}" role="img">
+                <i class="spr-icon reviews__spr-icon spr-icon-star"></i>
+                <i class="spr-icon reviews__spr-icon spr-icon-star"></i>
+                <i class="spr-icon reviews__spr-icon spr-icon-star"></i>
+                <i class="spr-icon reviews__spr-icon spr-icon-star-empty"></i>
+                <i class="spr-icon reviews__spr-icon spr-icon-star-empty"></i>
+            </span>
+            <h2 style="margin-left: 26px;">{{ product_card_product.metafields.reviews | size | append: ' reviews' | prepend: 'Based on '}}</h2>
+        </div>
+        <div class="reviews__more">
+            <P>Write a review</P>
+        </div>
+    </div>
+
+    <div class="reviews__content">
+        <span class="spr-starratings spr-review-header-starratings stars-products" aria-label="{{ product_card_product.metafields.reviews.rating.value }}" role="img">
+            <i class="spr-icon reviews__spr-icon spr-icon-star"></i>
+            <i class="spr-icon reviews__spr-icon spr-icon-star"></i>
+            <i class="spr-icon reviews__spr-icon spr-icon-star"></i>
+            <i class="spr-icon reviews__spr-icon spr-icon-star-empty"></i>
+            <i class="spr-icon reviews__spr-icon spr-icon-star-empty"></i>
+        </span>
+        <h4>{{ section.settings.reviews_subtitle }}</h4>
+        <h6>{{ section.settings.reviews_date }}</h6>
+        <p>{{ section.settings.reviews_description }}</p>
+    </div>
+
+    <div class="reviews__content">
+        <span class="spr-starratings spr-review-header-starratings stars-products" aria-label="{{ product_card_product.metafields.reviews.rating.value }}" role="img">
+            <i class="spr-icon reviews__spr-icon spr-icon-star"></i>
+            <i class="spr-icon reviews__spr-icon spr-icon-star"></i>
+            <i class="spr-icon reviews__spr-icon spr-icon-star"></i>
+            <i class="spr-icon reviews__spr-icon spr-icon-star-empty"></i>
+            <i class="spr-icon reviews__spr-icon spr-icon-star-empty"></i>
+        </span>
+        <h4>{{ section.settings.reviews_subtitle }}</h4>
+        <h6>{{ section.settings.reviews_date }}</h6>
+        <p>{{ section.settings.reviews_description }}</p>
+    </div>
+
+</div>
+
+{% schema %}
+{
+    "name": "Great Jones Reviews",
+    "settings": [
+        {
+            "type": "text",
+            "id": "reviews_title",
+            "label": "Title",
+            "default": "Title"
+        },
+        {
+            "type": "text",
+            "id": "reviews_subtitle",
+            "label": "Subtitle",
+            "default": "Subtitle"
+        },
+        {
+            "type": "text",
+            "id": "reviews_date",
+            "label": "Date",
+            "default": "Date"
+        },
+        {
+            "type": "richtext",
+            "id": "reviews_description",
+            "label": "Description",
+            "default": "<p>Description</p>"
+        }
+    ],
+    "presets": [
+        {
+            "name":"Great Jones Reviews"
+        }
+    ]
+}
+{% endschema %}

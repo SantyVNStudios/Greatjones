@@ -62,17 +62,19 @@
       {%- for block in section.blocks -%}
         {%- case block.type -%}
           {%- when 'heading' -%}
-            <h2 class="banner__heading image-banner__heading h1">
-              <span>{{ block.settings.heading | strip_html }}</span>
+            <h2 class="about-us__banner-heading banner__heading image-banner__heading h1">
+              <span>{{ block.settings.heading }}</span>
             </h2>
           {%- when 'text' -%}
             <div class="banner__text image-banner__text">
-              <span>{{ block.settings.text | strip_html }}</span>
+              <span>{{ block.settings.text }}</span>
             </div>
           {%- when 'buttons' -%}
             <div class="banner__buttons image-banner__button{% if block.settings.button_label_1 != blank and block.settings.button_link_1 != blank and block.settings.button_label_2 != blank and block.settings.button_link_2 != blank %} banner__buttons--multiple{% endif %}">
               {%- if block.settings.button_label_1 != blank -%}
-                <a href="{{ block.settings.button_link_1 }}" class="button{% if block.settings.button_style_secondary_1 %} button--secondary{% else %} button--primary{% endif %}"{% if block.settings.button_link_1 == blank %} aria-disabled="true"{% endif %}>{{ block.settings.button_label_1 | escape }}</a>
+                <a href="{{ block.settings.button_link_1 }}" class="button{% if block.settings.button_style_secondary_1 %} button--secondary{% else %} button--primary{% endif %}"{% if block.settings.button_link_1 == blank %} aria-disabled="true"{% endif %}>{{ block.settings.button_label_1 | escape }} 
+                    <div class="diamond-logo__buttom"><p></p></div>
+                </a>
               {%- endif -%}
               {%- if block.settings.button_label_2 != blank -%}
                 <a href="{{ block.settings.button_link_2 }}" class="button{% if block.settings.button_style_secondary_2 %} button--secondary{% else %} button--primary{% endif %}"{% if block.settings.button_link_2 == blank %} aria-disabled="true"{% endif %}>{{ block.settings.button_label_2 | escape }}</a>
@@ -86,7 +88,7 @@
 
 {% schema %}
 {
-  "name": "t:sections.image-banner.name",
+  "name": "GJ About Us Banner",
   "tag": "section",
   "class": "spaced-section spaced-section--full-width",
   "settings": [
@@ -210,31 +212,13 @@
           "id": "button_style_secondary_1",
           "default": false,
           "label": "t:sections.image-banner.blocks.buttons.settings.button_style_secondary_1.label"
-        },
-        {
-          "type": "text",
-          "id": "button_label_2",
-          "default": "Button label",
-          "label": "t:sections.image-banner.blocks.buttons.settings.button_label_2.label",
-          "info": "t:sections.image-banner.blocks.buttons.settings.button_label_2.info"
-        },
-        {
-          "type": "url",
-          "id": "button_link_2",
-          "label": "t:sections.image-banner.blocks.buttons.settings.button_link_2.label"
-        },
-        {
-          "type": "checkbox",
-          "id": "button_style_secondary_2",
-          "default": false,
-          "label": "t:sections.image-banner.blocks.buttons.settings.button_style_secondary_2.label"
         }
       ]
     }
   ],
   "presets": [
     {
-      "name": "t:sections.image-banner.presets.name",
+      "name": "GJ About Us Banner",
       "blocks": [
         {
           "type": "heading"

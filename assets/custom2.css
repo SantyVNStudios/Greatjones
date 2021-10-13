@@ -1,0 +1,760 @@
+/* -------------------------------------------------- HOME BANNER -------------------------------------------------- */
+.home-banner__header {
+    position: relative;
+    top: 0;
+}
+.home-banner__header-content {
+    display: flex;
+    width: 100%;
+    background-color: transparent;
+    position: absolute;
+    z-index: 1;
+    padding-left: 4.3rem;
+    padding-right: 4.3rem;
+    padding-top: 3.9rem;
+    justify-content: space-between;
+    color: var(--header-font-color);
+    max-width: unset;
+}
+
+/* -------------------------------------------------- GREAT JONES PRODUCTS -------------------------------------------------- */
+.buttom__sold-out {
+    border-radius: 0px !important;
+    width: 106px !important;
+    height: 41px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 0 !important;
+    font-size: 16px !important;
+}
+.card-information__wrapper-products {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.product__review {
+    font-size: 13px;
+    line-height: 32px !important;
+    display: flex;
+    justify-content: center;
+}
+.buttom__link {
+    background-color: #F4E7D1;
+    border-radius: 3px;
+    border: 2px solid #D3AB73;
+    height: 62px;
+    width: 194px;
+    color: black;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    line-height: 18px;
+    font-weight: 600;
+    letter-spacing: 0.75px;
+    position: relative;
+    text-transform: uppercase;
+}
+.buttom__link-disabled {
+    background-color: #DEDEDE;
+    border-radius: 3px;
+    border: 2px solid #000000;
+    height: 62px;
+    width: 194px;
+    color: black;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    line-height: 18px;
+    font-weight: 600;
+    letter-spacing: 0.75px;
+    position: relative;
+    text-transform: uppercase;
+}
+.background__products  {
+    background-color: #FEF7E7;
+    max-width: 100% !important;
+    padding-top: 25px !important;
+    padding-bottom: 60px;
+}
+.card-information__text-products {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 60px;
+    letter-spacing: 0.4px;
+    padding: 0 !important;
+    display: flex !important;
+    justify-content: center !important;
+    font-family: 'NeutraBold';
+}
+.price-item__products {
+    font-size: 13px !important;
+    line-height: 32px !important;
+    letter-spacing: 0px !important;
+    margin: 0;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    font-family: 'ProximaNova' !important;
+} 
+.price__regular dd {
+    margin: 0;
+}
+.price__products {
+    display: flex;
+    justify-content: center;
+}
+.diamond-logo {
+    position: absolute;
+    z-index: 3;
+    left: 0;
+    right: 0;
+    top: -59px;
+    bottom: 0;
+    margin: auto;
+    width: 8%;
+    height: 0;
+    padding-bottom: 8%;
+    -ms-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    background: #D3AB73;
+}
+.diamond-logo-disabled {
+    position: absolute;
+    z-index: 3;
+    left: 0;
+    right: 0;
+    top: -59px;
+    bottom: 0;
+    margin: auto;
+    width: 8%;
+    height: 0;
+    padding-bottom: 8%;
+    -ms-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    background: black;
+}
+.reviews-product {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    margin-bottom: 19px;
+}
+.stars-products {
+    margin-bottom: 0 !important;
+    color: black !important;
+}
+.review-price-item__products {
+    margin-left: 12px !important;
+}
+.buttom__on-sale {
+    border-radius: 0px !important;
+    width: 106px !important;
+    height: 41px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background: #D3AB73 !important;
+    border: none !important;
+    padding: 0 !important;
+    font-size: 16px !important;
+    color: black !important;
+    font-weight: 500 !important;
+}
+.margin-products {
+    margin-bottom: 0 !important;
+}
+/* -------------------------------------------------- GREAT JONES SECOND BANNER -------------------------------------------------- */
+.image-banner__background {
+    background: transparent !important;
+    text-align: start !important;
+}
+.image-banner__heading {
+    font-size: 80px;
+    line-height: 85px;
+    letter-spacing: 0px;
+    width: 700px;
+    font-family: fantasy;
+    color: white;
+    font-family: 'Altissima';
+    width: 365px;
+}
+.image-banner__heading p {
+    margin: 0 !important;
+}
+.image-banner__text {
+    font-size: 18px !important;
+    line-height: 32px !important;
+    letter-spacing: 0px !important;
+    margin-top: 37.58px !important;
+    color: white;
+    font-family: 'ProximaNova';
+}
+.image-banner__button {
+    transform: none !important;
+    position: relative !important;
+}
+.image-banner__button a {
+    width: 194.19px !important;
+    height: 62.48px !important;
+    border: 1px solid #D3AB73;
+    box-shadow: none !important;
+    font-size: 15px;
+    background: white;
+    color: black;
+    line-height: 18px;
+    letter-spacing: 0;
+    font-weight: 600;
+    margin-top: 46.85px;
+    font-family: 'NeutraBold';
+}
+.image-banner__content {
+    margin-left: 72px !important;
+    justify-content: start !important;
+}
+.diamond-logo__buttom {
+    position: absolute;
+    z-index: 3;
+    left: 0;
+    right: 269px;
+    top: -14px;
+    bottom: 0;
+    margin: auto;
+    width: 3%;
+    height: 0;
+    padding-bottom: 3%;
+    -ms-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    background: #D3AB73;
+}
+
+/* -------------------------------------------------- GREAT JONES FOOTER -------------------------------------------------- */
+.footer-singup-input {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: baseline !important;
+    max-width: 137rem !important;
+}
+.footer__newsletter-heading {
+    display: flex !important;
+    font-family: 'NeutraBold' !important;
+}
+.footer__newsletter-form {
+    justify-content: flex-start !important;
+}
+.footer__info-contents {
+    display: flex;
+    flex-direction: column;
+}
+.footer__info-contents h6, .footer__links-contents h6, .footer-title__newsletter {
+    font-size: 16px !important;
+    line-height: 19.2px;
+    letter-spacing: 0.4px;
+}
+.footer__info-contents h6 {
+    font-family: 'NeutraBold';
+}
+.footer__info-contents p {
+    font-family: 'ProximaNova';
+}
+.footer__links-contents h6 {
+    font-family: 'NeutraBold';
+}
+.footer__links-contents a {
+    font-family: 'ProximaNova';
+}
+.footer__info-contents p {
+    width: 454px;
+    font-size: 13px;
+    line-height: 24px;
+    margin: 0;
+}
+.footer__links-contents {
+    display: flex;
+    flex-direction: column;
+}
+.footer__links-contents a {
+    font-size: 18px;
+    line-height: 32px;
+    letter-spacing: 0px;
+    margin: 0;
+    color: white;
+    text-decoration: none;
+}
+.footer__search-bar {
+    width: 363px !important;
+    background-color: white !important;
+    color: black !important;
+}
+.footer__search-bar input {
+    height: 66px !important;
+    color: black !important;
+    font-family: 'ProximaNova' !important;
+}
+.footer__search-bar-label {
+    color: black !important;
+}
+.footer__sing-button {
+    border: 1px solid #D3AB73 !important;
+    position: relative;
+    height: 66px !important;
+    width: 232px !important;
+    font-family: 'NeutraBold' !important;
+    text-transform: uppercase !important;
+    padding: 0 100px !important;
+}
+.diamond-logo__sing-buttom {
+    position: absolute;
+    z-index: 3;
+    left: 87.5px;
+    right: 438px;
+    top: -67px;
+    bottom: 0;
+    margin: auto;
+    width: 9%;
+    height: 0;
+    padding-bottom: 9%;
+    -ms-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    background: #d3ab73;
+}
+.footer__newsletter-content {
+    margin-left: 100px !important;
+}
+/* -------------------------------------------------- GREAT JONES TESTIMONIALS -------------------------------------------------- */
+.multicolumn-background {
+    background-color: #FEF7E7 !important;
+    margin: 0 !important;
+}
+.multicolumn__transparent-background {
+    background-color: transparent !important;
+}
+.multicolumn__title {
+    display: flex !important;
+    justify-content: center !important;
+    margin-top: 0 !important;
+}
+.multicolumn__title h2 {
+    margin-top: 95px !important;
+    font-size: 45px !important;
+    line-height: 60px !important;
+    letter-spacing: 2.48px;
+    font-weight: 700 !important;
+    font-family: 'Altissima';
+}
+.multicolumn__contents {
+    display: flex !important;
+    flex-direction: column-reverse !important;
+}
+.multicolumn__contents h3 {
+    margin-top: 30px !important;
+    margin-bottom: 100px !important;
+    font-size: 18px !important;
+    line-height: 32px !important;
+    letter-spacing: 0px !important;
+    font-weight: 600 !important;
+    font-family: 'ProximaNova' !important;
+}
+.multicolumn__width {
+    max-width: 148rem !important;
+}
+.multicolumn__contents p {
+    font-size: 13px !important;
+    line-height: 26px !important;
+    letter-spacing: 0px !important;
+    font-weight: 600 !important;
+    font-family: 'ProximaNova' !important;
+}
+/* -------------------------------------------------- GREAT JONES WHATS NEW -------------------------------------------------- */
+.multicolumn__news-background {
+    background-color: #FEF7E7 !important;
+    margin: 0 !important;
+}
+.multicolumn__news-width {
+    max-width: 147rem !important;
+}
+.multicolumn__news-main-title {
+    display: flex !important;
+    justify-content: center !important;
+    margin: 0;
+}
+.multicolumn__news-main-title h2 {
+    font-size: 45px !important;
+    line-height: 60px !important;
+    letter-spacing: 2.48px !important;
+    margin-top: 92px !important;
+    margin-bottom: 48px !important;
+    font-family: 'Altissima';
+}
+.multicolumn__news-content {
+    padding-top: 0 !important;
+}
+.multicolumn__news-content h6 {
+    font-size: 13px;
+    line-height: 32px;
+    letter-spacing: 0px;
+    margin: 0;
+    font-family: 'ProximaNova' !important;
+} 
+.multicolumn__news-content h3 {
+   font-size: 14px;
+   line-height: 60px;
+   letter-spacing: 0.4px;
+   margin: 0 !important;
+   font-family: 'NeutraBold' !important;
+}
+.multicolumn__news-content p {
+    font-size: 13px;
+    line-height: 20px;
+    letter-spacing: 0px;
+    margin-bottom: 89px !important;
+    font-family: 'ProximaNova' !important;
+}
+
+/* -------------------------------------------------- GREAT JONES MAIN BANNER -------------------------------------------------- */
+.announcement-bar__text {
+    color: black;
+    font-size: 16px;
+    letter-spacing: 0.4px;
+    font-family: 'NeutraBold';
+}
+.search__main-content {
+    position: absolute !important;
+    z-index: 3 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    background-color: transparent !important;
+    display: flex;
+    justify-content: space-between;
+}
+.search__main-logo img {
+    width: 150px !important;
+}
+.search__items {
+    color: white !important;
+    font-family: 'NeutraBold' !important;
+    font-size: 13px !important;
+    line-height: 19.2px !important;
+    letter-spacing: 0.33px !important;
+}
+.right-menu__items {
+    display: flex !important;
+    justify-content: end !important;
+}
+.search__items-logo {
+    color: #C09762 !important;
+    font-size: 45px !important;
+    font-family: 'Altissima' !important;
+    letter-spacing: 5px !important;
+}
+.search__items svg {
+    width: 17px !important;
+    height: 17px !important;
+    margin-right: 10px !important;
+}
+/* -------------------------------------------------- GREAT JONES THIRD BANNER -------------------------------------------------- */
+.image-third-banner__heading {
+    width: auto !important;
+    text-align: end !important;
+    font-size: 24px !important;
+    line-height: 33px !important;
+    letter-spacing: 0.6px !important;
+    width: 228px !important;
+    font-family: 'NeutraText' !important;
+}
+.image-third-banner__heading p {
+    margin: 0 !important;
+}
+.image-third-banner__alignment {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end !important;
+    width: auto !important;
+}
+.image-third-banner__text {
+    text-align: end !important;
+    font-size: 13px !important;
+    line-height: 27px !important;
+    letter-spacing: 0px !important;
+    width: 371px;
+}
+.image-third-banner__button {
+    margin: 0 !important;
+}
+.image-third-banner__button a{
+    margin-right: 0 !important;
+    margin-top: 27px !important;
+}
+.diamond-third-logo__buttom {
+    position: absolute;
+    z-index: 3;
+    left: 89.5px;
+    right: 438px;
+    top: -34px;
+    bottom: 0;
+    margin: auto;
+    width: 7%;
+    height: 0;
+    padding-bottom: 7%;
+    -ms-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    background: #d3ab73;
+}
+/* -------------------------------------------------- GREAT JONES FOLLOW US -------------------------------------------------- */
+.background__follow {
+    max-width: 100% !important;
+    background-color: #fef7e7 !important;
+    margin-bottom: 50px !important;
+}
+.grid-items__follow {
+    padding: 0 !important;
+}
+.card-information__follow {
+    margin: 0 !important;
+}
+.card__follow {
+    border: none !important;
+}
+/* -------------------------------------------------- GREAT JONES FEATURED COLLECTIONS -------------------------------------------------- */
+.card__featured-collections {
+    height: 253px !important;
+}
+.card-information__featured-collections {
+    flex-direction: column;
+    align-items: center;
+}
+.card-information__featured-collections h2 {
+    margin: 0 !important;
+    font-size: 13px !important;
+    line-height: 32px !important;
+    letter-spacing: 0px !important;
+    font-family: 'ProximaNova' !important;
+}
+.card-information__featured-collections h2:hover {
+    text-decoration: none !important;
+}
+.media_featured-collections img {
+    height: 300px !important;
+}
+.background__featured-collections {
+    padding-bottom: 0 !important;
+}
+/* -------------------------------------------------- GREAT JONES NEW YORK TIMES -------------------------------------------------- */
+.background_nyt {
+    background-color: #001538 !important;
+    margin: 0 !important;
+}
+.title__nyt {
+    display: flex !important;
+    justify-content: center !important;
+    margin: 0 !important;
+}
+.title__nyt h2 {
+    color: var(--color-base-text)!important;
+    margin-top: 56px !important;
+    margin-bottom: 107px !important;
+    font-size: 24px !important;
+    line-height: 60px !important;
+    letter-spacing: 0.6px !important;
+    font-family: 'NeutraBold' !important;
+}
+.media_nyt {
+    margin-bottom: 150px !important;
+}
+/* -------------------------------------------------- GREAT JONES REVIEWS -------------------------------------------------- */
+.background__reviews {
+    background-color: #FEF7E7;
+    display: flex;
+    flex-direction: column;
+    padding: 94px;
+}
+.reviews__title {
+    display: flex;
+    justify-content: center;
+}
+.reviews__title h1 {
+    letter-spacing: 2.48px;
+    font: normal normal normal 45px/60px 'Altissima';
+    margin-top: 0;
+}
+.reviews__subtitle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #707070;
+}
+.reviews__spr-icon {
+    font-size: 100% !important;
+    color: #D3AB73 !important;
+}
+.reviews__subtitle-content h2 {
+   font-size: 13px;
+   line-height: 32px;
+   letter-spacing: 0px;
+   font-family: 'ProximaNova';
+}
+.reviews__more {
+    font-size: 13px;
+    line-height: 32px;
+    letter-spacing: 0px;
+    font-family: 'ProximaNova';
+}
+.reviews__content {
+    border-bottom: 1px solid #707070;
+}
+.reviews__content span {
+    margin-bottom: 10px !important;
+    margin-top: 12px !important;
+}
+.reviews__content h4 {
+    margin: 0 !important;
+    font-size: 16px !important;
+    line-height: 60px !important;
+    letter-spacing: 0.4px !important;
+    font-family: 'NeutraBold' !important;
+    height: 30px;
+}
+.reviews__content h6 {
+    margin: 0 !important;
+    font-size: 13px !important;
+    line-height: 32px !important;
+    letter-spacing: 0 !important;
+    font-family: 'ProximaNova' !important;
+}
+.reviews__content p {
+    font-size: 13px !important;
+    line-height: 18px !important;
+    letter-spacing: 0 !important;
+    font-family: 'ProximaNova' !important;
+}
+/* -------------------------------------------------- GREAT JONES MAIN PRODUCTS -------------------------------------------------- */
+.main-products__background {
+    background: #FEF7E7 !important;
+    max-width: none !important;
+}
+.product__main-content {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: baseline !important;
+}
+.product__main-title {
+    font: normal normal normal 45px/60px 'Altissima' !important;
+    letter-spacing: 2.48px !important;
+    margin-bottom: 0 !important;
+}
+.product__main-description {
+    margin: 0 !important;
+    font-size: 13px !important;
+    line-height: 22px !important;
+    letter-spacing: 0px;
+    font-family: 'ProximaNova' !important;
+    width: 400px !important;
+}
+.product__form-buttons {
+    margin-bottom: 0 !important;
+}
+.product__main-buttons {
+    display: flex !important;
+}
+.product__first-button {
+    width: 194.19px!important;
+    height: 62.48px!important;
+    border: 1px solid #d3ab73;
+    box-shadow: none!important;
+    font-size: 15px;
+    background: #fff;
+    color: #000;
+    line-height: 18px;
+    letter-spacing: 0;
+    font-weight: 600;
+    font-family: NeutraBold;
+    margin-right: 10px !important;
+    text-transform: uppercase;
+}
+.quantity__main-button {
+    border: none !important;
+}
+.product-form__content {
+    margin: 0 !important;
+}
+.form__main-label {
+    font-size: 13px !important;
+    line-height: 32px !important;
+    letter-spacing: 0px !important;
+    font-family: 'ProximaNova' !important;
+}
+.product__main-text {
+    margin: 0 !important;
+    font-size: 13px !important;
+    line-height: 32px !important;
+    letter-spacing: 0px !important;
+    font-family: 'ProximaNova' !important;
+}
+.form__label-main-size {
+    font-size: 13px !important;
+    line-height: 32px !important;
+    letter-spacing: 0px !important;
+    font-family: 'ProximaNova' !important;
+}
+.price-item__main-product {
+    font: normal normal normal 18px/32px 'ProximaNova' !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0px !important;
+}
+/* -------------------------------------------------- GREAT JONES ABOUT US BANNER -------------------------------------------------- */
+.about-us__banner-heading p{
+    margin: 0 !important;
+}
+.background__about-us-description {
+    display: flex;
+    background: #FEF7E7;
+    padding: 60px 90px;
+    justify-content: center;
+}
+.about-us__description {
+    margin-right: 54px;
+}
+.about-us__image p{
+    width: 378px;
+    font-size: 13px;
+    line-height: 18px;
+    letter-spacing: 0px;
+    font-family: 'ProximaNova';
+}
+.about-us__image img {
+    width: 378px !important;
+    height: 253px !important;
+}
+.about-us__description p {
+    width: 725px;
+    font-size: 13px;
+    line-height: 18px;
+    letter-spacing: 0px;
+    font-family: 'ProximaNova';
+}
+.about-us__description h6 {
+    font-size: 16px;
+    letter-spacing: 0.4px;
+    font-family: 'NeutraBold';
+    margin: 0;
+}
+.about-us__image h6 {
+    font-size: 16px;
+    letter-spacing: 0.4px;
+    font-family: 'NeutraBold';
+    margin: 0;
+}
+
+.background-prueba {
+    color: red;
+    background-color: royalblue;
+}

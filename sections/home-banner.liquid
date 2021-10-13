@@ -10,6 +10,8 @@
   {%- endstyle -%}
 {%- endif -%}
 
+{% render 'homebanner' %}
+
 <div id="Banner-{{ section.id }}" class="banner{% if section.settings.stack_images_on_mobile and section.settings.image != blank and section.settings.image_2 != blank%} banner--stacked{% endif %}{% if section.settings.adapt_height_first_image and section.settings.image != blank %} banner--adapt{% endif %}">
   {%- if section.settings.image != blank -%}
     <div class="banner__media media{% if section.settings.image == blank and section.settings.image_2 == blank %} placeholder{% endif %}{% if section.settings.image_2 != blank %} banner__media-half{% endif %}">
@@ -67,17 +69,12 @@
             </h2>
           {%- when 'text' -%}
             <div class="banner__text image-banner__text">
-              <span>{{ block.settings.text | strip_html }}</span>
+              <span>{{ block.settings.subtitle | strip_html }}</span>
             </div>
-          {%- when 'buttons' -%}
-            <div class="banner__buttons image-banner__button{% if block.settings.button_label_1 != blank and block.settings.button_link_1 != blank and block.settings.button_label_2 != blank and block.settings.button_link_2 != blank %} banner__buttons--multiple{% endif %}">
-              {%- if block.settings.button_label_1 != blank -%}
-                <a href="{{ block.settings.button_link_1 }}" class="button{% if block.settings.button_style_secondary_1 %} button--secondary{% else %} button--primary{% endif %}"{% if block.settings.button_link_1 == blank %} aria-disabled="true"{% endif %}>{{ block.settings.button_label_1 | escape }}</a>
-              {%- endif -%}
-              {%- if block.settings.button_label_2 != blank -%}
-                <a href="{{ block.settings.button_link_2 }}" class="button{% if block.settings.button_style_secondary_2 %} button--secondary{% else %} button--primary{% endif %}"{% if block.settings.button_link_2 == blank %} aria-disabled="true"{% endif %}>{{ block.settings.button_label_2 | escape }}</a>
-              {%- endif -%}
-            </div>
+            {%- when 'richtext' -%}
+                <p class="home-banner__description">
+                   <span>{{ block.settings.richtext | strip_html }}</span>
+                </p>
         {%- endcase -%}
       {%- endfor -%}
     </div>
@@ -86,7 +83,7 @@
 
 {% schema %}
 {
-  "name": "t:sections.image-banner.name",
+  "name": "Home Banner",
   "tag": "section",
   "class": "spaced-section spaced-section--full-width",
   "settings": [
@@ -94,11 +91,6 @@
       "type": "image_picker",
       "id": "image",
       "label": "t:sections.image-banner.settings.image.label"
-    },
-    {
-      "type": "image_picker",
-      "id": "image_2",
-      "label": "t:sections.image-banner.settings.image_2.label"
     },
     {
       "type": "select",
@@ -163,87 +155,58 @@
   ],
   "blocks": [
     {
-      "type": "heading",
-      "name": "t:sections.image-banner.blocks.heading.name",
-      "limit": 1,
-      "settings": [
-        {
-          "type": "richtext",
-          "id": "heading",
-          "default": "<p>Image banner</p>",
-          "label": "t:sections.image-banner.blocks.heading.settings.heading.label"
-        }
-      ]
+        "type": "text",
+        "name": "Subtitle",
+        "limit": 1,
+        "settings": [
+            {
+                "type": "text",
+                "id": "subtitle",
+                "default": "Write here your custom subtitle",
+                "label": "Subtitle"
+            }
+        ]
     },
     {
-      "type": "text",
-      "name": "t:sections.image-banner.blocks.text.name",
-      "limit": 1,
-      "settings": [
-        {
-          "type": "richtext",
-          "id": "text",
-          "default": "<p>Give customers details about the banner image(s) or content on the template.</p>",
-          "label": "t:sections.image-banner.blocks.text.settings.text.label"
-        }
-      ]
+        "type": "heading",
+        "name": "Heading",
+        "limit": 1,
+        "settings": [
+            {
+                "type": "text",
+                "id": "heading",
+                "default": "White here your custom title",
+                "label": "Title"
+            }
+        ]
+
     },
     {
-      "type": "buttons",
-      "name": "t:sections.image-banner.blocks.buttons.name",
-      "limit": 1,
-      "settings": [
+        "type": "richtext",
+        "name": "Description",
+        "limit": 1,
+        "settings": [
         {
-          "type": "text",
-          "id": "button_label_1",
-          "default": "Button label",
-          "label": "t:sections.image-banner.blocks.buttons.settings.button_label_1.label",
-          "info": "t:sections.image-banner.blocks.buttons.settings.button_label_1.info"
-        },
-        {
-          "type": "url",
-          "id": "button_link_1",
-          "label": "t:sections.image-banner.blocks.buttons.settings.button_link_1.label"
-        },
-        {
-          "type": "checkbox",
-          "id": "button_style_secondary_1",
-          "default": false,
-          "label": "t:sections.image-banner.blocks.buttons.settings.button_style_secondary_1.label"
-        },
-        {
-          "type": "text",
-          "id": "button_label_2",
-          "default": "Button label",
-          "label": "t:sections.image-banner.blocks.buttons.settings.button_label_2.label",
-          "info": "t:sections.image-banner.blocks.buttons.settings.button_label_2.info"
-        },
-        {
-          "type": "url",
-          "id": "button_link_2",
-          "label": "t:sections.image-banner.blocks.buttons.settings.button_link_2.label"
-        },
-        {
-          "type": "checkbox",
-          "id": "button_style_secondary_2",
-          "default": false,
-          "label": "t:sections.image-banner.blocks.buttons.settings.button_style_secondary_2.label"
-        }
-      ]
+            "type": "richtext",
+            "id": "richtext",
+            "default": "<p>Write here your custom description</p>",
+            "label": "Description"
+          }
+        ]
     }
   ],
   "presets": [
     {
-      "name": "t:sections.image-banner.presets.name",
+      "name": "Home Banner",
       "blocks": [
         {
-          "type": "heading"
+            "type": "text"
         },
         {
-          "type": "text"
+            "type": "heading"
         },
         {
-          "type": "buttons"
+            "type": "richtext"
         }
       ]
     }

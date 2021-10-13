@@ -1,0 +1,13 @@
+{%- comment -%}
+    Requires the following arguments:
+
+    - product
+{%- endcomment -%}
+
+<a class="product-title" href="{{ product.url }}">
+    <img class="product-title__image" src="{{ product.featured_image | img_url: '253x641' }}" alt="{{ product.features_image.alt }}">
+    <div class="product-title__info">
+        <h3 class="product-title__title">{{ product.title }}</h3>
+        <span class="product-title__price">{{ product.price | money }}</span>
+    </div>
+</a>

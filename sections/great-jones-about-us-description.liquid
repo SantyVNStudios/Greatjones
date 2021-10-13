@@ -1,0 +1,46 @@
+<div class="background__about-us-description">
+    <div class="about-us__description">
+        <h6>{{ section.settings.about_heading }}</h6>
+        <p>{{ section.settings.about_description }}</p>
+        <ul>
+            <li class="hola"><p>{{ section.settings.about_description }}</p></li>
+            <li><p>{{ section.settings.about_description }}</p></li>
+        </ul>
+    </div>
+    <div class="about-us__image">
+        <img src="{{ section.settings.about_image | img_url: '378x253'}}" alt=""/>
+        <h6>{{ section.settings.about_heading }}</h6>
+        <p>{{ section.settings.about_description }}</p>
+        <p>{{ section.settings.about_description }}</p>
+    </div>
+</div>
+
+{% schema %}
+{
+    "name": "GJ About Us Description",
+    "settings": [
+        {
+            "type": "text",
+            "id": "about_heading",
+            "label": "Heading",
+            "default": "Heading"
+        },
+        {
+            "type": "richtext",
+            "id": "about_description",
+            "label": "Description",
+            "default": "<p>Description</p>"
+        },
+        {
+            "type": "image_picker",
+            "id": "about_image",
+            "label": "Image"
+        }
+    ],
+    "presets": [
+        {
+            "name":"GJ About Us Description"
+        }
+    ]
+}
+{% endschema %}
