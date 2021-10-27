@@ -1,5 +1,10 @@
 {
   "current": {
+    "colors_accent_1": "#43cfc9",
+    "colors_accent_2": "#d3ab73",
+    "colors_text": "#000000",
+    "colors_outline_button_labels": "#FFFFFF",
+    "colors_background_2": "#fff",
     "sections": {
       "announcement-bar": {
         "type": "announcement-bar",
@@ -38,6 +43,49 @@
           "enable_country_selector": true,
           "enable_language_selector": true,
           "payment_enable": true
+        }
+      },
+      "great-jones-footer": {
+        "type": "great-jones-footer",
+        "blocks": {
+          "great-jones-footer-0": {
+            "type": "link_list",
+            "settings": {
+              "heading": "Quick links",
+              "menu": "footer"
+            }
+          }
+        },
+        "block_order": [
+          "great-jones-footer-0"
+        ],
+        "settings": {
+          "color_scheme": "inverse",
+          "newsletter_enable": true,
+          "newsletter_heading": "NEWSLATTER",
+          "show_social": false,
+          "enable_country_selector": true,
+          "description_title": "ABOUT",
+          "description_text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec odio non arcu dapibus cursus sit amet eu metus. Fusce efficitur luctus ullamcorper. Aliquam sodales urna eget tellus varius, vulputate aliquet <\/p>",
+          "description_title_links": "LINKS",
+          "description_text_links": "Search",
+          "search_url": "shopify:\/\/collections\/featured-products",
+          "description_text_links2": "About us",
+          "about_url": "shopify:\/\/blogs\/noticias",
+          "enable_language_selector": true,
+          "payment_enable": true
+        }
+      },
+      "great-jones-search": {
+        "type": "great-jones-search",
+        "settings": {
+          "logo": "shopify:\/\/shop_images\/gj_logo_150x_4d9bd6cd-04b5-4285-9a1f-705561328fd1.png",
+          "logo_width": 100,
+          "logo_position": "middle-left",
+          "menu": "main-menu",
+          "right_menu": "right-menu",
+          "show_line_separator": false,
+          "enable_sticky_header": true
         }
       }
     },

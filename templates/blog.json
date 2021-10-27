@@ -5,7 +5,10 @@
       "blocks": {
         "title": {
           "type": "title",
-          "settings": {}
+          "settings": {
+            "show_date": true,
+            "show_author": false
+          }
         },
         "summary": {
           "type": "summary",
@@ -21,10 +24,50 @@
         "summary",
         "link"
       ],
-      "settings": {}
+      "settings": {
+        "show_image": true
+      }
+    },
+    "1633548130df9f7285": {
+      "type": "great-jones-about-us-banner",
+      "blocks": {
+        "1633548130df9f7285-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>ABOUT US<\/p>"
+          }
+        },
+        "1633548130df9f7285-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Bringing back the craft and tradition of whiskey distilling to New York's most iconic island.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "1633548130df9f7285-0",
+        "1633548130df9f7285-1"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/ice-cold-affogato-coffee-on-wooden-table.jpg",
+        "desktop_text_box_position": "center",
+        "color_scheme": "background-1",
+        "stack_images_on_mobile": true,
+        "adapt_height_first_image": false
+      }
+    },
+    "16335490241b82e410": {
+      "type": "great-jones-about-us-description",
+      "settings": {
+        "about_heading": "LOREM IPSUM",
+        "about_description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec odio non arcu dapibus cursus sit amet eu metus. Fusce efficitur luctus ullamcorper. Aliquam sodales urna eget tellus varius, vulputate aliquet turpis molestie. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.<\/p>",
+        "about_image": "shopify:\/\/shop_images\/laptop-in-empty-room.jpg"
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "1633548130df9f7285",
+    "16335490241b82e410"
   ]
 }
