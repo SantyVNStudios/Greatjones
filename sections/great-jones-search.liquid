@@ -450,9 +450,19 @@
                 </details-disclosure>
               {%- else -%}
                 <a href="{{ link.url }}" class=" search__items header__menu-item header__menu-item list-menu__item link link--text focus-inset"{% if link.current %} aria-current="page"{% endif %}>
-                  <svg class="modal__toggle-open icon icon-search" aria-hidden="true" focusable="false" role="presentation">
-                    <use href="#icon-search">
-                  </svg>
+               
+                {%- assign link_title = link.title | downcase -%}
+                  {% case link_title %}
+                    {% when 'search' %}
+                      {% render 'icon-search' %}
+                      {% when 'account' %}
+                        {% render 'icon-account' %}
+                      {% when 'cart' %}
+                        {% render 'icon-share' %}
+                    {% else %}
+                      
+                  {% endcase %}
+                  
                   <span {%- if link.current %} class="header__active-menu-item"{% endif %}>{{ link.title | escape }}</span> 
                 </a>
               {%- endif -%}

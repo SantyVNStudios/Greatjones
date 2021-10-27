@@ -16,7 +16,7 @@
   <link id="ModelViewerOverride" rel="stylesheet" href="{{ 'component-model-viewer-ui.css' | asset_url }}" media="print" onload="this.media='all'">
 {%- endif -%}
 
-<section class="main-products__background">
+<section class="page-width">
   <div class="product grid grid--1-col {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
     <div class="grid__item product__media-wrapper">
       <slider-component class="slider-mobile-gutter">
@@ -65,7 +65,7 @@
       {%- endif -%}
     </div>
     <div class="product__info-wrapper grid__item">
-      <div id="ProductInfo-{{ section.id }}" class="product__main-content product__info-container{% if section.settings.enable_sticky_info %} product__info-container--sticky{% endif %}">
+      <div id="ProductInfo-{{ section.id }}" class="product__info-container{% if section.settings.enable_sticky_info %} product__info-container--sticky{% endif %}">
         {%- assign product_form_id = 'product-form-' | append: section.id -%}
 
         {%- for block in section.blocks -%}
@@ -73,16 +73,16 @@
           {%- when '@app' -%}
             {% render block %}
           {%- when 'text' -%}
-            <p class="product__text product__main-text{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}">
+            <p class="product__text{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}">
               {{- block.settings.text -}}
             </p>
           {%- when 'title' -%}
-            <h1 class="product__title product__main-title">
+            <h1 class="product__title">
               {{ product.title | escape }}
             </h1>
           {%- when 'price' -%}
             <div class="no-js-hidden" id="price-{{ section.id }}">
-              {%- render 'great-jones-product-price', product: product, use_variant: true, show_badges: true, price_class: 'price--large' -%}
+              {%- render 'price', product: product, use_variant: true, show_badges: true, price_class: 'price--large' -%}
             </div>
             {%- form 'product', product, id: 'product-form-installment', class: 'installment caption-large' -%}
               <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
@@ -90,11 +90,10 @@
             {%- endform -%}
           {%- when 'description' -%}
             {%- if product.description != blank -%}
-              <div class="product__description product__main-description rte">
+              <div class="product__description rte">
                 {{ product.description }}
               </div>
             {%- endif -%}
-            
           {%- when 'collapsible_tab' -%}
             <div class="product__accordion accordion">
               <details>
@@ -114,11 +113,11 @@
               </details>
             </div>
           {%- when 'quantity_selector' -%}
-            <div class="product-form__input product-form__quantity product-form__content">
-              <label class="form__label form__main-label" for="Quantity-{{ section.id }}">
+            <div class="product-form__input product-form__quantity">
+              <label class="form__label" for="Quantity-{{ section.id }}">
                 {{ 'products.product.quantity.label' | t }}
               </label>
-              <quantity-input class="quantity quantity__main-button">
+              <quantity-input class="quantity">
                 <button class="quantity__button no-js-hidden" name="minus" type="button">
                   <span class="visually-hidden">{{ 'products.product.quantity.decrease' | t: product: product.title | escape }}</span>
                   {% render 'icon-minus' %}
@@ -181,8 +180,8 @@
               {%- if block.settings.picker_type == 'button' -%}
                 <variant-radios class="no-js-hidden" data-section="{{ section.id }}" data-url="{{ product.url }}">
                   {%- for option in product.options_with_values -%}
-                      <fieldset class="js product-form__input" style="display: flex !important;">
-                        <legend class="form__label form__label-main-size">{{ option.name }}</legend>
+                      <fieldset class="js product-form__input">
+                        <legend class="form__label">{{ option.name }}</legend>
                         {%- for value in option.values -%}
                           <input type="radio" id="{{ section.id }}-{{ option.name }}-{{ forloop.index0 }}"
                                 name="{{ option.name }}"
@@ -253,14 +252,14 @@
               </div>
             </noscript>
           {%- when 'buy_buttons' -%}
-            <product-form class="product-form product__form-buttons">
+            <product-form class="product-form">
               {%- form 'product', product, id: product_form_id, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
                 <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
-                <div class="product-form__buttons product__main-buttons">
+                <div class="product-form__buttons">
                   <button
                     type="submit"
                     name="add"
-                    class="product__first-button product-form__submit button button--full-width {% if block.settings.show_dynamic_checkout and product.selling_plan_groups == empty %}button--secondary{% else %}button--primary{% endif %}"
+                    class="product-form__submit button button--full-width {% if block.settings.show_dynamic_checkout and product.selling_plan_groups == empty %}button--secondary{% else %}button--primary{% endif %}"
                   {% if product.selected_or_first_available_variant.available == false %}disabled{% endif %}
                   >
                       {%- if product.selected_or_first_available_variant.available -%}
@@ -270,7 +269,7 @@
                       {%- endif -%}
                   </button>
                   {%- if block.settings.show_dynamic_checkout -%}
-                     {{ form | payment_button }}
+                    {{ form | payment_button }}
                   {%- endif -%}
                 </div>
               {%- endform -%}
@@ -453,9 +452,9 @@
 
 {% schema %}
 {
-  "name": "Great Jones Main Products",
+  "name": "Example",
   "tag": "section",
-  "class": "product-section",
+  "class": "product-section spaced-section",
   "blocks": [
     {
       "type": "@app"
@@ -546,7 +545,8 @@
     },
     {
       "type": "description",
-      "name": "t:sections.main-product.blocks.description.name"
+      "name": "t:sections.main-product.blocks.description.name",
+      "limit": 1
     },
     {
       "type": "share",
@@ -727,10 +727,10 @@
       "label": "t:sections.main-product.settings.enable_video_looping.label"
     }
   ],
-   "presets": [
-      {
-          "name":"Great Jones Main Products"
-      }
+    "presets": [
+    {
+      "name": "Example"
+    }
   ]
 }
 {% endschema %}

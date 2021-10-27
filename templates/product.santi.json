@@ -1,0 +1,91 @@
+{
+    "sections": {
+      "main": {
+        "type": "great-jones-main-product",
+        "blocks": {
+          "vendor": {
+            "type": "text",
+            "settings": {
+              "text": "",
+              "text_style": "uppercase"
+            }
+          },
+          "title": {
+            "type": "title",
+            "settings": {}
+          },
+          "subtitle": {
+            "type": "text",
+            "settings": {
+              "text": "",
+              "text_style": "subtitle"
+            }
+          },
+          "price": {
+            "type": "price",
+            "settings": {}
+          },
+          "variant_picker": {
+            "type": "variant_picker",
+            "settings": {
+              "picker_type": "button"
+            }
+          },
+          "quantity_selector": {
+            "type": "quantity_selector",
+            "settings": {}
+          },
+          "buy_buttons": {
+            "type": "buy_buttons",
+            "settings": {
+              "show_dynamic_checkout": true
+            }
+          },
+          "description": {
+            "type": "description",
+            "settings": {}
+          },
+          "share": {
+            "type": "share",
+            "settings": {}
+          },
+          "1f05bb6f-791b-4d2f-ac6d-6e5cd3859b75": {
+            "type": "shopify:\/\/apps\/product-reviews\/blocks\/reviews\/bae150af-8da8-48b2-9867-398188115e5f",
+            "settings": {}
+          },
+          "d4709c66-2af1-4396-9c6e-16d7f004f9c8": {
+            "type": "shopify:\/\/apps\/product-reviews\/blocks\/star_rating\/bae150af-8da8-48b2-9867-398188115e5f",
+            "settings": {
+              "stars_fill_color": "#000000",
+              "star_size": 15,
+              "text_align": "center",
+              "product": "",
+              "stars_text_empty": "No reviews"
+            }
+          }
+        },
+        "block_order": [
+          "vendor",
+          "title",
+          "subtitle",
+          "price",
+          "variant_picker",
+          "quantity_selector",
+          "buy_buttons",
+          "description",
+          "share",
+          "1f05bb6f-791b-4d2f-ac6d-6e5cd3859b75",
+          "d4709c66-2af1-4396-9c6e-16d7f004f9c8"
+        ],
+        "settings": {
+          "enable_sticky_info": true,
+          "enable_video_looping": false
+        }
+      }
+    },
+    "order": [
+      "main"
+    ]
+  }
+
+  
